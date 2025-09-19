@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Satti Suma | Portfolio</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #0a192f;
+      color: #ffffff;
+    }
+    header {
+      background-color: #112240;
+      padding: 15px 10%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      position: sticky;
+      top: 0;
+    }
+    .logo {
+      font-weight: bold;
+      font-size: 1.2rem;
+      color: #64ffda;
+    }
+    nav {
+      margin-top: 10px;
+    }
+    nav a {
+      color: #ffffff;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      color: #64ffda;
+    }
+    section {
+      padding: 60px 10%;
+    }
+    h2 {
+      color: #64ffda;
+      margin-bottom: 20px;
+    }
+    h3 {
+      margin: 20px 0 10px;
+      color: #64ffda;
+    }
+    .heroin {
+      text-align: center;
+      padding: 80px 20px;
+    }
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 20px;
+      text-align: center;
+    }
+    .skill {
+      background: #112240;
+      padding: 20px;
+      border-radius: 8px;
+    }
+    .skill span {
+      display: block;
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+    .projects, .education {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: #112240;
+      padding: 20px;
+      border-radius: 8px;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #112240;
+      color: #8892b0;
+    }
+
+    /* 📱 RESPONSIVE DESIGN */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+      nav a {
+        display: inline-block;
+        margin: 5px;
+      }
+      .heroin h1 {
+        font-size: 1.5rem;
+      }
+      .heroin h3 {
+        font-size: 1rem;
+      }
+      section {
+        padding: 40px 5%;
+      }
+    }
+    button{
+      background-color: #64ffda;
+      border-radius: 10px;
+      width:100%;
+      height: 32px;
+    }
+
+    @media (max-width: 480px) {
+      .heroin h1 {
+        font-size: 1.2rem;
+      }
+      .heroin h3 {
+        font-size: 0.9rem;
+      }
+      nav a {
+        display: block;
+        margin: 8px 0;
+      }
+    }
+    #contact .contact-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* allows wrapping on small screens */
+    gap: 20px; /* spacing between the boxes */
+    }
+
+    #contact .contactinfo {
+    flex: 1; /* each takes equal width */
+    min-width: 250px; /* ensures they don’t shrink too small */
+    background: #112240;
+    padding: 20px;
+    border-radius: 8px;
+    }
+    #modeToggle {
+      transition: transform 0.3s ease;
+    }
+    #modeToggle:hover {
+      transform: rotate(20deg) scale(1.2);
+    }
+    /* ✨ Hover Effects for Cards, Skills & Contact */
+    .card, .skill, .contactinfo {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover, .skill:hover, .contactinfo:hover {
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Satti Suma</div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+      <!-- Mode toggle icon -->
+      <span id="modeToggle" onclick="changeMode()" style="cursor:pointer; font-size:1.5rem; margin-left:15px;">🌙</span>
+
+    </nav>
+
+  </header>
+
+  <section class="heroin">
+    <h1>Hi, I'm Satti Suma 👋</h1>
+    <h3>Frontend Developer | Full Stack Learner | Data Enthusiast</h3>
+  </section>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I am a 3rd year B.Tech student specializing in Computer Science and Engineering (Data Science), with a strong foundation in programming languages including Java, C, and Python.
+    I have hands-on experience with Exploratory Data Analysis (EDA) and core Data Science concepts, enabling me to extract insights and make data-driven decisions.
+    Additionally, I am currently learning Full Stack Development with a focus on React Native.
+    Passionate about both software development and data analysis, I am eager to contribute to innovative projects and grow as a developer and data enthusiast.</p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+
+    <h3>Frontend</h3>
+    <div class="skills-grid">
+      <div class="skill"><span><img width="48" height="48" src="https://img.icons8.com/color/48/html-5--v1.png" alt="html-5--v1"/></span>HTML</div>
+      <div class="skill"><span><img width="48" height="48" src="https://img.icons8.com/color/48/css3.png" alt="css3"/></span>CSS</div>
+      <div class="skill"><span><img width="50" height="50" src="https://img.icons8.com/fluency/50/javascript.png" alt="javascript"/></span>JavaScript</div>
+    </div>
+
+    <h3>Programming</h3>
+    <div class="skills-grid">
+      <div class="skill"><span><img width="24" height="24" src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/24/external-python-an-interpreted-high-level-general-purpose-programming-language-logo-color-tal-revivo.png" alt="external-python-an-interpreted-high-level-general-purpose-programming-language-logo-color-tal-revivo"/></span>Python</div>
+      <div class="skill"><span><img width="48" height="48" src="https://img.icons8.com/color/48/java-coffee-cup-logo--v1.png" alt="java-coffee-cup-logo--v1"/></span>Java</div>
+      <div class="skill"><span><img width="48" height="48" src="https://img.icons8.com/color/48/c-programming.png" alt="c-programming"/></span>C</div>
+    </div>
+
+    <h3>EDA Skills</h3>
+    <div class="skills-grid">
+      <div class="skill"><span><img width="48" height="48" src="https://img.icons8.com/color/48/pandas.png" alt="pandas"/></span>Pandas</div>
+      <div class="skill"><span><img width="48" height="48" src="https://img.icons8.com/color/48/matplotlib.png" alt="matplotlib"/></span>Matplotlib</div>
+      <div class="skill"><span><img width="48" height="48" src="https://img.icons8.com/color/48/numpy.png" alt="numpy"/></span>Numpy</div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="card">
+        <img src="./visiting card.png" height="200px" width="100%"/>
+        <h3>Digital Visiting Card</h3><p>Interactive portfolio card using HTML & CSS.</p>
+        <div>
+          <button><a href="https://github.com/sumareddy-1234/digital-visiting-card">Explore</a></button>
+        </div>
+      </div>
+      <div class="card">
+        <img src="./Algo.png" height="200" width="100%"/>
+        <h3>ALGONEST</h3><p>DSA prep website using HTML and CSS.</p>
+        <button><a href="https://github.com/sumareddy-1234/Algonest">Explore</a></button>
+      </div>
+      <div class="card">
+        <img src="./Screenshot 2025-09-08 103646.png" height="200" width="100%"/>
+        <h3>Diabetes Prediction</h3><p>Diabetes Prediction using Machine Learning.</p>
+        <button><a href="https://github.com/sumareddy-1234/Machine-Learning-Projects/tree/main/diabetes-prediction-ml">Explore</a></button>
+      </div>
+    </div>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <div class="education">
+      <div class="card"><h3>B.Tech – CSE (Data Science)</h3><p>Aditya Engineering College | CGPA: 8.06</p></div>
+      <div class="card"><h3>Intermediate (MPC)</h3><p>Narayana Junior College | 91.8%</p></div>
+      <div class="card"><h3>SSC</h3><p>Vikas E.M. School | 99%</p></div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Let's Connect</h2>
+    <p>I'm always excited to collaborate on innovative projects and explore new opportunities</p>
+    <div class="contact-container">
+    <div class="contactinfo">
+      <h3>Get in Touch</h3>
+      <p><a href="mailto:sumareddy.satti@gmail.com" style="color:#64ffda;"><strong>sumareddy.satti@gmail.com</strong></a></p>
+      <p>Phone: 7569833788</p>
+    </div>
+    <div class="contactinfo">
+      <h3>Social Links</h3>
+      <p><a href="https://www.linkedin.com/in/suma-satti" style="color:#64ffda;"><img width="48" height="48" src="https://img.icons8.com/color/48/linkedin.png" alt="linkedin"/></a>
+      <a href="https://github.com/sumareddy-1234" style="color:#64ffda;"><img width="48" height="48" src="https://img.icons8.com/color-glass/48/github--v1.png" alt="github--v1"/></a></p>
+      <a href="../resume.pdf" download><button  style="width:32%">Download Resume</button></a>
+    </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Satti Suma | Built with HTML, CSS ,JS
+  </footer>
+  <script>
+function changeMode() {
+  const body = document.body;
+  const cards = document.querySelectorAll(".skill, .card, footer, .contactinfo");
+  const highlights = document.querySelectorAll("h2, h3, #contact a");
+  const buttons = document.querySelectorAll("button");
+  const toggleIcon = document.getElementById("modeToggle");
+  const navLinks = document.querySelectorAll("header nav a");
+  const logo = document.querySelector(".logo");
+
+  if (body.style.backgroundColor === "rgb(245, 245, 245)") {
+    // 🌑 Back to dark mode
+    body.style.backgroundColor = "#0a192f";
+    body.style.color = "white";
+    toggleIcon.textContent = "🌙";
+
+    cards.forEach(c => c.style.backgroundColor = "#112240");
+    highlights.forEach(h => h.style.color = "#64ffda");
+    navLinks.forEach(link => link.style.color = "#ffffff"); // keep white in header
+    logo.style.color = "#ffffff"; // logo text white
+    buttons.forEach(b => {
+      b.style.backgroundColor = "#64ffda";
+      b.style.color = "#000";
+      const link = b.querySelector("a");
+      if (link) link.style.color = "#000";
+    });
+  } else {
+    // ☀️ Switch to light mode
+    body.style.backgroundColor = "rgb(245, 245, 245)";
+    body.style.color = "#111";
+    toggleIcon.textContent = "🌞";
+
+    cards.forEach(c => c.style.backgroundColor = "#e0e0e0");
+    highlights.forEach(h => h.style.color = "#0077cc");
+    logo.style.color = "#ffffff"; // logo text white
+    buttons.forEach(b => {
+      b.style.backgroundColor = "#0077cc";
+      b.style.color = "#fff";
+      const link = b.querySelector("a");
+      if (link) link.style.color = "#fff";
+    });
+  }
+}
+</script>
+
+
+
+</body>
+</html>
